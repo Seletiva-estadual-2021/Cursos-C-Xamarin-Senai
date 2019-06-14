@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Aula_1.model;
 using Aula_1.implementacoes;
 using Aula_1.interfaces;
+using Aula_1.view;
 
 namespace Aula_1
 {
@@ -24,6 +25,7 @@ namespace Aula_1
             Console.WriteLine(credito.pagar(150.00));
 
             Console.ReadLine();
+            new Cadastro().Show();
         }
     }
 }
