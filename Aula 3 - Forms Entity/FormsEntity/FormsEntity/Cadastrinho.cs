@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,19 @@ namespace FormsEntity
             //outra forma de pegar a imagem da pessoa quando a descricao vem do banco
             fotoTemp = pessoaSel.foto != null ? pessoaSel.foto.Trim() : "sem_foto";
             fotoPic.Image = (Image) Resources.ResourceManager.GetObject(fotoTemp);
+        }
+
+        private void abreArquivo(object sender, EventArgs e)
+        {
+            openFileDialog1.FileName = "Select a image file";
+            openFileDialog1.Filter = "Image files (*.png)|*.png| Image files (*.jpg)|*.jpg | Image files (*.jpeg)|*.jpeg";
+            openFileDialog1.Title = "Open image file";
+            openFileDialog1.ShowDialog();
+        }
+
+        private void openProcess(object sender, EventArgs e)
+        {
+            Process.Start("Chrome.exe", "www.folha.uol.com.br");
         }
     }
 }
