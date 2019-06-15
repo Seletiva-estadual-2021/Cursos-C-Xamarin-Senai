@@ -17,5 +17,6 @@ namespace FormsEntity
         public int id { get; set; }
         public string nome { get; set; }
         public Nullable<int> idade { get; set; }
+        public string foto { get; set; }
     }
 }

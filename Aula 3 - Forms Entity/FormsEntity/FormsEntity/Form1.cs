@@ -14,7 +14,7 @@ namespace FormsEntity
     {
         private testeEntities en = new testeEntities();
         private List<pessoa> pessoas = new List<pessoa>();
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +39,11 @@ namespace FormsEntity
         private void button2_Click(object sender, EventArgs e)
         {
             new Tabelas().Show();
+        }
+
+        private void abreCadastro(object sender, EventArgs e)
+        {
+            new Cadastrinho().Show();
         }
     }
 }

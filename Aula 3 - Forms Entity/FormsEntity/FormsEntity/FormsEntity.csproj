@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastrinho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastrinho.Designer.cs">
+      <DependentUpon>Cadastrinho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Tabelas.Designer.cs">
       <DependentUpon>Tabelas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cadastrinho.resx">
+      <DependentUpon>Cadastrinho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Tabelas.resx">
       <DependentUpon>Tabelas.cs</DependentUpon>
@@ -134,6 +144,14 @@
       <DependentUpon>FormsEntityModel.edmx</DependentUpon>
       <LastGenOutput>FormsEntityModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\saudavel.jpg" />
+    <None Include="Resources\salgados.jpg" />
+    <None Include="Resources\salgadinhos.jpg" />
+    <None Include="Resources\escondidinho3.jpg" />
+    <None Include="Resources\escondidinho2.jpg" />
+    <None Include="Resources\escondidinho1.jpg" />
+    <None Include="Resources\sem foto.png" />
+    <None Include="Resources\3x4.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

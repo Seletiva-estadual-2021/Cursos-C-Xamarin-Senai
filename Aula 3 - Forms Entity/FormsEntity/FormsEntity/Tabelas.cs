@@ -30,9 +30,16 @@ namespace FormsEntity
             tblPessoas.DataSource = pessoas;
 
             Image img1 = Image.FromFile(@"C:\Users\william.chenta\Downloads\3x4.jpeg");
-            
+            int i = 1;
             pessoas.ForEach(p => {
-                tblPessoas2.Rows.Add(p.id, p.nome, p.idade, img1);
+                if(i%2 == 0)
+                {
+                    tblPessoas2.Rows.Add(p.id, p.nome, p.idade, img1);
+                } else
+                {
+                    tblPessoas2.Rows.Add(p.id, p.nome, p.idade, null);
+                }
+                i++;
             });
 
             //tblPessoas2.Rows.Add("3", "William x", "99", "aqui");
