@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,14 @@ namespace FormsEntity
         private void openProcess(object sender, EventArgs e)
         {
             Process.Start("Chrome.exe", "www.folha.uol.com.br");
+        }
+
+        private void pegouArquivo(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("pegou arquivo: " + openFileDialog1.FileName);
+
+            byte[] content = File.ReadAllBytes(openFileDialog1.FileName);
+            File.WriteAllBytes(@"C:\Users\william.chenta\Downloads\csharp\teste.png", content); 
         }
     }
 }

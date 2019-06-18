@@ -144,6 +144,7 @@
       <DependentUpon>FormsEntityModel.edmx</DependentUpon>
       <LastGenOutput>FormsEntityModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\temporary.png" />
     <None Include="Resources\saudavel.jpg" />
     <None Include="Resources\salgados.jpg" />
     <None Include="Resources\salgadinhos.jpg" />
