@@ -69,8 +69,15 @@ namespace FormsEntity
         {
             MessageBox.Show("pegou arquivo: " + openFileDialog1.FileName);
 
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+
+
+            MessageBox.Show(RunningPath);
+
+            string resourcesPath = Path.GetFullPath(Path.Combine(RunningPath, @"..\..\Resources\teste.png"));
+
             byte[] content = File.ReadAllBytes(openFileDialog1.FileName);
-            File.WriteAllBytes(@"C:\Users\william.chenta\Downloads\csharp\teste.png", content); 
+            File.WriteAllBytes(resourcesPath, content); 
         }
     }
 }
