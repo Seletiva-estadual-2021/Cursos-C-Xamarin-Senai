@@ -55,5 +55,10 @@ namespace FormsEntity
             pessoa p = pessoas.ElementAt(id);
             MessageBox.Show(p.nome);
         }
+
+        private void abreComponentesGrid(object sender, EventArgs e)
+        {
+            new ComponentesGrid().Show();
+        }
     }
 }
