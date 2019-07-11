@@ -177,7 +177,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tblPessoas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Cadastrinho";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrinho";
             ((System.ComponentModel.ISupportInitialize)(this.tblPessoas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPic)).EndInit();
