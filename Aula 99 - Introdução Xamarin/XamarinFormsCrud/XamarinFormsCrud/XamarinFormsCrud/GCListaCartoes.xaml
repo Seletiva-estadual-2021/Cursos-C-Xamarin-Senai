@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsCrud.GCListaCartoes" Title="Teste">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Botão 1" Order="Secondary" />
+        <ToolbarItem Text="Botão 3" Order="Primary" Icon="plus.png" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>        
+        <StackLayout>
+            <Label Text="cliente selecionado: {Binding idCli}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
