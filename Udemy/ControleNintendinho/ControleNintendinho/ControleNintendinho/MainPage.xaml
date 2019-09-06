@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ControleNintendinho"
+             x:Class="ControleNintendinho.MainPage">
+
+    <RelativeLayout
+        VerticalOptions="Center"
+        >
+        <Image
+            Source="controlefundo.png"
+            ScaleX="1"
+            ScaleY="1"
+            />
+        <AbsoluteLayout
+            HeightRequest="180"
+            WidthRequest="180"
+            Margin="50,50,0,0"
+            >
+            <Image Source="btndirec.png"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                   />
+            <!-- esses são os botões de direção -->
+
+            <!-- cima -->
+            <ImageButton
+               AbsoluteLayout.LayoutBounds=".5,0,.3,.3" AbsoluteLayout.LayoutFlags="All"
+               Source="btncima.png"
+               />
+            <!-- baixo -->
+            <ImageButton
+               AbsoluteLayout.LayoutBounds=".5,1,.3,.3" AbsoluteLayout.LayoutFlags="All"
+               Source="btnbaixo.png"
+               />
+            <!-- direita -->
+            <ImageButton
+               Source="btndireita.png"
+               AbsoluteLayout.LayoutBounds="1,.5,.3,.3" AbsoluteLayout.LayoutFlags="All"
+                />
+            <!-- esquerda -->
+            <ImageButton
+               Source="btnesquerda.png"
+               AbsoluteLayout.LayoutBounds="0,.5,.3,.3" AbsoluteLayout.LayoutFlags="All"
+                />
+        </AbsoluteLayout>
+
+        <!-- esses são os botões coloridos -->
+
+        <!-- azul -->
+        <ImageButton
+            Margin="500,50,0,0"
+            Source="btnazul.png"
+            HeightRequest="50"
+            WidthRequest="50"
+            />
+        <!-- verde -->
+        <ImageButton
+            Margin="400,100,0,0"
+            Source="btnverde.png"
+            HeightRequest="50"
+            WidthRequest="50"
+            />
+
+    </RelativeLayout>
+
+</ContentPage>
