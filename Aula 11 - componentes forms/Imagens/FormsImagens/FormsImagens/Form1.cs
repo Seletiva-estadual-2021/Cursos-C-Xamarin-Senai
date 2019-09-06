@@ -13,6 +13,8 @@ namespace FormsImagens
 {
     public partial class Form1 : Form
     {
+        List<Image> fotos = new List<Image>();
+
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +40,16 @@ namespace FormsImagens
             byte[] content = File.ReadAllBytes(openFileDialog1.FileName);
             MemoryStream ms = new MemoryStream(content);
             imgFoto.Image = Image.FromStream(ms);
+            fotos.Add(imgFoto.Image);
+            carregaTabela();
+        }
+
+        private void carregaTabela()
+        {
+            dataGridView1.Rows.Clear();
+            fotos.ForEach(f => {
+                dataGridView1.Rows.Add(f);
+            });
         }
     }
 }
