@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+
+    <StackLayout Padding="10">
+        <ListView x:Name="listaPessoas"
+                  RowHeight="60"
+                  SeparatorVisibility="None"
+                  BackgroundColor="#e8e8e8" ItemSelected="pessoaSel">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="FillAndExpand"
+                             Orientation="Horizontal"
+                             Padding="20,10,0,10"
+                             Spacing="20">
+
+                            <Image Source="bean.png"
+                             WidthRequest="40"
+                             HeightRequest="40"
+                             VerticalOptions="Center" />    
+
+                            <Label Text="{Binding nome}"
+                             FontSize="Medium"
+                             VerticalOptions="Center"
+                             TextColor="Black"/>
+
+                            <Label Text="{Binding idade}"
+                             FontSize="Medium"
+                             VerticalOptions="Center"
+                             TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

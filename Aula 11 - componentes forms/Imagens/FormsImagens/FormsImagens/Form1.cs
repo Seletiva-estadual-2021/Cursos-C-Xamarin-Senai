@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,23 @@ namespace FormsImagens
             InitializeComponent();
             imgFoto.Image = Image.FromFile(@"D:\drive\drive2\lixo\logo.png");
             button1.Click += carregaFoto;
+
+            Saudacoes s = new Saudacoes();
+            s.digaOi();
+            dateTimePicker1.TextChanged += setaData;
+            button2.Click += chamaForm2;
+        }
+
+        private void chamaForm2(object sender, EventArgs e)
+        {
+            new Form2("olá form", this).Show();
+            Hide();
+        }
+
+        private void setaData(object sender, EventArgs e)
+        {
+            DateTime data = dateTimePicker1.Value;
+            MessageBox.Show($"Faltam {365 - data.DayOfYear} dias para o fim do ano!");
         }
 
         private void carregaFoto(object sender, EventArgs e)
