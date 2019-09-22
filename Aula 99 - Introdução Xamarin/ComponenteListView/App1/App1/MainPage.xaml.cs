@@ -44,5 +44,16 @@ namespace App1
             var pessoaSel = (Pessoa)e.SelectedItem;
             DisplayAlert("Listagem de pessoas", $"A pessoa clicada foi: {pessoaSel.nome}", "OK");
         }
+
+        private void clicou(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Pessoa pes = pessoas.Where(p => p.nome.Equals(button.CommandParameter))
+                .Select(p=> p).FirstOrDefault();
+
+            DisplayAlert("Listagem de pessoas", $"A pessoa clicada foi: {pes.nome}", "OK");
+
+
+        }
     }
 }

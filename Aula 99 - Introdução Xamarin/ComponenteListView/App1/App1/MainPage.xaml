@@ -21,17 +21,19 @@
                             <Image Source="bean.png"
                              WidthRequest="40"
                              HeightRequest="40"
-                             VerticalOptions="Center" />    
+                             VerticalOptions="Center"/>    
 
                             <Label Text="{Binding nome}"
                              FontSize="Medium"
                              VerticalOptions="Center"
-                             TextColor="Black"/>
+                             TextColor="Black" />
 
                             <Label Text="{Binding idade}"
                              FontSize="Medium"
                              VerticalOptions="Center"
                              TextColor="Black"/>
+
+                            <Button Text="Clique aqui" Clicked="clicou" CommandParameter="{Binding nome}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
