@@ -52,8 +52,6 @@ namespace App1
                 .Select(p=> p).FirstOrDefault();
 
             DisplayAlert("Listagem de pessoas", $"A pessoa clicada foi: {pes.nome}", "OK");
-
-
         }
     }
 }
