@@ -26,6 +26,8 @@ namespace PessoasAPI.Controllers
         // POST api/<controller>
         public pessoa Post([FromBody] pessoa value)
         {
+            en.pessoa.Add(value);
+            en.SaveChanges();
             return value;
         }
 
