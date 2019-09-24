@@ -32,13 +32,22 @@ namespace PessoasAPI.Controllers
         }
 
         // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        public pessoa Put(int id, [FromBody] pessoa value)
         {
+            pessoa p = en.pessoa.Find(id);
+            p.nome = value.nome;
+            p.idade = value.idade;
+            p.foto = value.foto;
+            en.SaveChanges();
+            return value;
         }
 
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
+            pessoa p = en.pessoa.Find(id);
+            en.pessoa.Remove(p);
+            en.SaveChanges();
         }
     }
 }

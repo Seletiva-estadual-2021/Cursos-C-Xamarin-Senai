@@ -11,7 +11,8 @@ namespace RestClient
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new Cadastro();
         }
 
         protected override void OnStart()

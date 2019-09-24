@@ -11,5 +11,8 @@ namespace RestClient.services
     {
         [Get("/api/Pessoa/")]
         Task<List<Pessoa>> GetPessoas();
+
+        [Post("/api/Pessoa")]
+        Task Salvar([Body(BodySerializationMethod.UrlEncoded)] Pessoa data);
     }
 }
