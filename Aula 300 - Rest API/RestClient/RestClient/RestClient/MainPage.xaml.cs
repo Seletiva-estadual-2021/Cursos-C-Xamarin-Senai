@@ -16,11 +16,12 @@ namespace RestClient
         {
             InitializeComponent();
             var pessoaAPI = RestService.For<IRestApi>("http://localhost:51459");
-            List<Pessoa> listaPessoas = pessoaAPI.GetPessoas().Result;
+            List<Pessoa> pessoas = pessoaAPI.GetPessoas().Result;
+            listaPessoas.ItemsSource = pessoas;
 
-            listaPessoas.ForEach(p => {
-                DisplayAlert("teste", p.nome, "OK");
-            });
+            //listaPessoas.ForEach(p => {
+            //    DisplayAlert("teste", p.nome, "OK");
+            //});
         }
     }
 }
