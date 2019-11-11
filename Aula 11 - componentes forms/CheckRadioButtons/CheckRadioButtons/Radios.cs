@@ -15,6 +15,23 @@ namespace CheckRadioButtons
         public Radios()
         {
             InitializeComponent();
+
+            button1.Click += Testar;
+        }
+
+        private void Testar(object sender, EventArgs e)
+        {
+            if (rdMasculino.Checked)
+            {
+                MessageBox.Show("Sexo selecionado: Masculino");
+            }
+            else if (rdFeminino.Checked)
+            {
+                MessageBox.Show("Sexo selecionado: Feminino");
+            } else
+            {
+                Console.WriteLine("Informe o sexo");
+            }
         }
     }
 }
