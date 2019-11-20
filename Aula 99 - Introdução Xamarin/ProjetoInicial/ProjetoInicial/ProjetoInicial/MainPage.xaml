@@ -6,7 +6,7 @@
 
     <StackLayout>
         <Entry Placeholder="login" Margin="10"/>
-        <Entry Placeholder="senha" Margin="10"/>
+        <Entry Placeholder="senha" Margin="10" IsPassword="True"/>
         <Button Text="Logar" Clicked="Logar"/>
         
     </StackLayout>
