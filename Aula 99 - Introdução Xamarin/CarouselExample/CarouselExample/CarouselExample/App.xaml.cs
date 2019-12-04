@@ -9,8 +9,10 @@ namespace CarouselExample
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage()) {
+                BarBackgroundColor = Color.DarkBlue,
+                BarTextColor = Color.WhiteSmoke
+            };
         }
 
         protected override void OnStart()

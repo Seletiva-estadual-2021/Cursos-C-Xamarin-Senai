@@ -6,6 +6,6 @@
              mc:Ignorable="d"
              x:Class="CarouselExample.App">
     <Application.Resources>
-
+        <StyleSheet Source="/Assets/estilo.css" />
     </Application.Resources>
 </Application>

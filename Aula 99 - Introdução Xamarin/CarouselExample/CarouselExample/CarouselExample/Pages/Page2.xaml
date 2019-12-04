@@ -7,9 +7,10 @@
              x:Class="CarouselExample.Pages.Page2">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Page2"
+            <Label Text="Linguagem C#"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Image Source="c#.png"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

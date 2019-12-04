@@ -7,9 +7,10 @@
              x:Class="CarouselExample.Pages.Page3">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Page3"
+            <Label Text="Linguagem Java"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" StyleClass="label3"/>
+            <Image Source="java.png"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

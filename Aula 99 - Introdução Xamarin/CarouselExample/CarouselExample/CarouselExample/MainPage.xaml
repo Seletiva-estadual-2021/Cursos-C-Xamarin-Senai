@@ -5,7 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:pages="clr-namespace:CarouselExample.Pages" 
              mc:Ignorable="d"
-             x:Class="CarouselExample.MainPage">
+             x:Class="CarouselExample.MainPage" Title="Aula Carousel Pages">
+
+    <CarouselPage.ToolbarItems>
+        <ToolbarItem Text="Cadastros" IconImageSource="linguagens.jpg"/>
+        <ToolbarItem Text="Relatórios" IconImageSource="basket.png"/>
+        <ToolbarItem Text="Sair" IconImageSource="disquete.png"/>
+    </CarouselPage.ToolbarItems>
 
     <pages:Page1/>
     <pages:Page2/>
