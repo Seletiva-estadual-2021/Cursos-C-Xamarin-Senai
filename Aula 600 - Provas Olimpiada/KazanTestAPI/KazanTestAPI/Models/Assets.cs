@@ -14,13 +14,6 @@ namespace KazanTestAPI.Models
     
     public partial class Assets
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Assets()
-        {
-            this.AssetPhotos = new HashSet<AssetPhotos>();
-            this.AssetTransferLogs = new HashSet<AssetTransferLogs>();
-        }
-    
         public long ID { get; set; }
         public string AssetSN { get; set; }
         public string AssetName { get; set; }
@@ -29,13 +22,15 @@ namespace KazanTestAPI.Models
         public long AssetGroupID { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> WarrantyDate { get; set; }
-    
-        public virtual AssetGroups AssetGroups { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssetPhotos> AssetPhotos { get; set; }
-        public virtual DepartmentLocations DepartmentLocations { get; set; }
-        public virtual Employees Employees { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssetTransferLogs> AssetTransferLogs { get; set; }
+
+        public Assets()
+        {
+        }
+
+        public Assets(string assetSN, string assetName)
+        {
+            AssetSN = assetSN;
+            AssetName = assetName;
+        }
     }
 }

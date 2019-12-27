@@ -14,21 +14,7 @@ namespace KazanTestAPI.Models
     
     public partial class Departments
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Departments()
-        {
-            this.DepartmentLocations = new HashSet<DepartmentLocations>();
-        }
-    
         public long ID { get; set; }
         public string Name { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DepartmentLocations> DepartmentLocations { get; set; }
-
-        public override string ToString()
-        {
-            return $"{ID} - {Name}";
-        }
     }
 }

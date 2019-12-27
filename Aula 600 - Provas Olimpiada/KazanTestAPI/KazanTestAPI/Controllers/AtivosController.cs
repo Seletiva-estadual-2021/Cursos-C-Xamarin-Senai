@@ -13,9 +13,15 @@ namespace KazanTestAPI.Controllers
         Session1Entities bd = new Session1Entities();
 
         // GET: api/Ativos
-        public IEnumerable<Assets> Get()
+        public List<AssetsResult> Get()
         {
-            return bd.Assets.ToList();
+            var assts = from asset in bd.Assets
+                        join dli in bd.DepartmentLocations on asset.DepartmentLocationID equals dli.ID
+                        join dpt in bd.Departments on dli.DepartmentID equals dpt.ID
+                        where asset.EmployeeID > 10
+                        select new { asset.AssetSN, asset.AssetName, dpt.Name };
+
+            return assts.AsEnumerable().Select(a => new AssetsResult(a.AssetSN, a.AssetName, a.Name)).ToList();
         }
 
         // GET: api/Ativos/5

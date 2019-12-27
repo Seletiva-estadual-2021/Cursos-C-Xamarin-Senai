@@ -14,5 +14,8 @@ namespace KazanTest.model
         public long AssetGroupID { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> WarrantyDate { get; set; }
+
+
+        public string DeptName { get; set; }
     }
 }
