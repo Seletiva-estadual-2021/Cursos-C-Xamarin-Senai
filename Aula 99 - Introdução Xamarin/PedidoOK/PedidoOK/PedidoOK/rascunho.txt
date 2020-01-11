@@ -1,0 +1,20 @@
+﻿<StackLayout Orientation="Horizontal" Margin="5,0,0,0">
+                        
+            
+            <StackLayout StyleId="fotoItemQtde">
+                <Image Source="camiseta.jpg" />
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="adicionar.jpg" />
+                    <Image Source="excluir.jpg" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout StyleId="detalhesItem">
+                <Label Text="03-Camiseta unissex" />
+                <Label Text="UN 47,40 Estoque 7" />
+                <Label Text="4 UN 49,90" />
+                <Label Text="GG 1 | G:1 | M:2" />
+            </StackLayout>
+            <StackLayout StyleId="precoItem">
+                <Label Text="199,60" />
+            </StackLayout>
+        </StackLayout>
