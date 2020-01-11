@@ -5,3 +5,19 @@
     text-align: center;
     padding-top: 10;
 }
+
+.detalhes1 {
+    font-size: 12;
+    font-style: bold;
+}
+
+.detalhes2 {
+    font-size: 13;
+    color: gray;
+}
+
+.detalhes3 {
+    font-size: 15;
+    color: gray;
+    font-style: bold;
+}

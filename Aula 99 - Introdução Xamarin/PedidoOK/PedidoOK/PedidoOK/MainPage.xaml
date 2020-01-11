@@ -13,33 +13,46 @@
             <Image Source="clientes.jpg" />
             <Image Source="produtos.jpg" />
         </StackLayout>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.5*" />
-                <ColumnDefinition Width="7*" />
-                <ColumnDefinition Width="1.5*"/>
-            </Grid.ColumnDefinitions>
-            <StackLayout StyleId="fotoItemQtde" Grid.Row="0" Grid.Column="0" VerticalOptions="Fill">
-                <Image Source="camiseta.jpg" />
-                <StackLayout Orientation="Horizontal">
-                    <Image Source="adicionar.jpg" />
-                    <Image Source="excluir.jpg" />
-                </StackLayout>
-            </StackLayout>
-
-            <StackLayout StyleId="detalhesItem" Grid.Row="0" Grid.Column="1" VerticalOptions="Fill">
-                <Label Text="03-Camiseta unissex" />
-                <Label Text="UN 47,40 Estoque 7" />
-                <Label Text="4 UN 49,90" />
-                <Label Text="GG 1 | G:1 | M:2" />
-            </StackLayout>
-
-            <StackLayout StyleId="precoItem" Grid.Row="0" Grid.Column="2" VerticalOptions="Fill">
-                <Label Text="199,60" />
-            </StackLayout>
 
 
-        </Grid>
+        <ListView x:Name="produtosList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*" />
+                                <ColumnDefinition Width="7*" />
+                                <ColumnDefinition Width="1.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout StyleId="fotoItemQtde" Grid.Row="0" Grid.Column="0" VerticalOptions="Fill">
+                                <Image Source="camiseta.jpg" />
+                                <StackLayout Orientation="Horizontal">
+                                    <ImageButton Source="adicionar.jpg" Clicked="adicionar" CommandParameter="{Binding id}"/>
+                                    <ImageButton Source="excluir.jpg"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout StyleId="detalhesItem" Grid.Row="0" Grid.Column="1" VerticalOptions="Fill">
+                                <Label Text="{Binding nome}" Margin="0,10,0,0" StyleClass="detalhes1"/>
+                                <Label Text="UN 47,40 Estoque 7" Margin="0,-10,0,0" StyleClass="detalhes2"/>
+                                <Label Text="4 UN 49,90" Margin="0,-10,0,0" StyleClass="detalhes3"/>
+                                <Label Text="GG 1 | G:1 | M:2" Margin="0,-10,0,0" StyleClass="detalhes2"/>
+                            </StackLayout>
+
+                            <StackLayout StyleId="precoItem" Grid.Row="0" Grid.Column="2" VerticalOptions="Fill">
+                                <Label Text="199,60" Margin="0,35,0,0"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+
+
     </StackLayout>
 
 </ContentPage>
