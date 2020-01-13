@@ -8,6 +8,9 @@
         <StackLayout StyleClass="barra_laranja">
             <Label Text="PedidoOK Fit" />
         </StackLayout>
+        
+        <Entry Placeholder="+ Novo item no pedido" />
+        
         <StackLayout Orientation="Horizontal" Margin="5,0,0,0">
             <Image Source="pedidos.jpg" />
             <Image Source="clientes.jpg" />
@@ -15,7 +18,7 @@
         </StackLayout>
 
 
-        <ListView x:Name="produtosList">
+        <ListView x:Name="produtosList" RowHeight="80">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

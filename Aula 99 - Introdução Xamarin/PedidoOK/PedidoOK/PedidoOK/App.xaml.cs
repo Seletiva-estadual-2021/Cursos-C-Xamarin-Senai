@@ -10,8 +10,7 @@ namespace PedidoOK
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new Menu();
         }
 
         protected override void OnStart()
