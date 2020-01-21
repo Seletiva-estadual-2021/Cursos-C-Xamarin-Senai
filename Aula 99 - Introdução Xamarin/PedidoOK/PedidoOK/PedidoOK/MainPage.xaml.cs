@@ -14,6 +14,7 @@ namespace PedidoOK
         public MainPage()
         {
             InitializeComponent();
+            
             produtosList.ItemsSource = ProdutoMock.gerar();
         }
 

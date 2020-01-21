@@ -18,7 +18,7 @@
         </StackLayout>
 
 
-        <ListView x:Name="produtosList" RowHeight="80">
+        <ListView x:Name="produtosList" RowHeight="80" SelectionMode="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

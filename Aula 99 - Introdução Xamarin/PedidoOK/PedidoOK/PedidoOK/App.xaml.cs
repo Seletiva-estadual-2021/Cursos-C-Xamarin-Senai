@@ -11,6 +11,8 @@ namespace PedidoOK
         {
             InitializeComponent();
             MainPage = new Menu();
+            MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.Coral);
+            MainPage.SetValue(NavigationPage.BarTextColorProperty, Color.White);
         }
 
         protected override void OnStart()

@@ -14,7 +14,7 @@ namespace PedidoOK
 	{
 		public MenuDetail ()
 		{
-			InitializeComponent ();
+			InitializeComponent ();            
 		}
 	}
 }
